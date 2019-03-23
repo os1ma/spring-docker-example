@@ -9,6 +9,12 @@ Sample application with Spring Boot on Docker
 $ ./mvnw compile jib:dockerBuild
 ```
 
+### Using Dockerfile (Amazon Corretto 8 based)
+
+```bash
+$ docker build -t spring-docker-example .
+```
+
 ## Run
 
 ```bash
