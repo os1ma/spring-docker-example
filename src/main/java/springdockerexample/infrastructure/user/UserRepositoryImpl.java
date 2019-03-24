@@ -10,7 +10,7 @@ import springdockerexample.domain.user.Users;
 import java.util.List;
 
 @Repository
-public class UserDataSource implements UserRepository {
+public class UserRepositoryImpl implements UserRepository {
   @Autowired
   private UserMapper mapper;
 

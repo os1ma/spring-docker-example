@@ -9,4 +9,8 @@ import java.util.List;
 @AllArgsConstructor
 public class Users {
   private List<User> users;
+
+  public int count() {
+    return users.size();
+  }
 }
