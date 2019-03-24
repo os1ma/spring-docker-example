@@ -44,11 +44,7 @@ public class MySQLContainerContextInitializer implements ApplicationContextIniti
 
   @Override
   public void initialize(ConfigurableApplicationContext context) {
-    MYSQL.start();
-    String mysqlJdbcUrl = MYSQL.getJdbcUrl() +
-            "?spring.datasource.username=" + MYSQL.getUsername() +
-            "spring.datasource.password=" + MYSQL.getPassword() +
-            "spring.datasource.driver-class-name=" + MYSQL.getDriverClassName();
+    String mysqlJdbcUrl = MYSQL.getJdbcUrl();
     TestPropertyValues.of("spring.datasource.url=" + mysqlJdbcUrl)
             .applyTo(context.getEnvironment());
   }
