@@ -10,7 +10,7 @@ import springdockerexample.domain.user.Users;
 
 @RestController
 @Validated
-@RequestMapping(value = "/users")
+@RequestMapping("/users")
 public class UserController {
   @Autowired
   private UserService userService;
