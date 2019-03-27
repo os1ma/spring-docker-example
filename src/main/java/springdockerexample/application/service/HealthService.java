@@ -13,14 +13,13 @@ public class HealthService {
   private Health health = Health.HEALTHY;
 
   public Health getHealth() {
-    // Try execute query 'SELECT 1'.
+    // Try executing query 'SELECT 1'.
     oneRepository.selectOne();
 
     return this.health;
   }
 
   public Health updateHealth(Health health) {
-    this.health = health;
-    return this.health;
+    return this.health = health;
   }
 }
