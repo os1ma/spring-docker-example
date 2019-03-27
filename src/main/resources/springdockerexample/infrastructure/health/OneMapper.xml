@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="springdockerexample.infrastructure.health.OneMapper">
+
+    <resultMap id="one" type="springdockerexample.domain.health.One">
+        <result property="value" column="one"/>
+    </resultMap>
+
+    <select id="selectOne" resultMap="one">
+        SELECT 1 AS ones
+    </select>
+
+</mapper>
