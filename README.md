@@ -4,18 +4,10 @@ Sample application with Spring Boot on Docker
 
 ## Develop
 
-When you develop, you have to start MySQL container.
-
-This container mounts ./src/test/resources/docker-entrypoint-initdb.d to initialize database.
+When you develop, you have to start Spring Boot container and MySQL container by following command.
 
 ```bash
-$ docker-compose up -d
-```
-
-Next, start Spring Boot application with spring-dev-tools.
-
-```bash
-$ ./mvnw spring-boot:run
+$ docker-compose up
 ```
 
 ## Test
