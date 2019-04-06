@@ -1,5 +1,7 @@
 # spring-docker-example
 
+[![CircleCI](https://circleci.com/gh/os1ma/spring-docker-example.svg?style=svg)](https://circleci.com/gh/os1ma/spring-docker-example)
+
 Sample application with Spring Boot on Docker
 
 ## Develop
