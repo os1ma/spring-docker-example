@@ -2,6 +2,8 @@
 
 [![CircleCI](https://circleci.com/gh/os1ma/spring-docker-example.svg?style=svg)](https://circleci.com/gh/os1ma/spring-docker-example)
 
+[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
+
 Sample application with Spring Boot on Docker
 
 ## Develop
