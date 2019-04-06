@@ -27,8 +27,7 @@ $ ./mvnw clean test compile jib:dockerBuild
 ### Using Dockerfile (Amazon Corretto 8 based)
 
 ```bash
-$ ./mvnw clean package
-$ docker build -t spring-docker-example .
+$ ./build.sh
 ```
 
 ## Run
