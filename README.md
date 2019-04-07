@@ -6,33 +6,45 @@
 
 Sample application with Spring Boot on Docker
 
-## Develop
+## Dependencies
+- Docker
+- Docker Compose
 
-When you develop, you have to start Spring Boot container and MySQL container by following command.
+## Using Tools
+- Spirng Boot
+- Testcontainers
+- Jib
+- Amazon Corretto 8
+
+## Usage
+
+### Develop
+
+When you develop, you are able to start Spring Boot container and MySQL container by following command.
 
 ```bash
 $ docker-compose up
 ```
 
-## Test
+### Test
 
-Unit test is able to execute with testcontainers.
+You can use Testcontainers in unit test.
 
-## Build
+### Build
 
-### Using Jib
-
-```bash
-$ ./mvnw clean test compile jib:dockerBuild
-```
-
-### Using Dockerfile (Amazon Corretto 8 based)
+#### Using Dockerfile (Amazon Corretto 8 based)
 
 ```bash
 $ ./build.sh
 ```
 
-## Run
+#### Using Jib
+
+```bash
+$ ./mvnw clean test compile jib:dockerBuild
+```
+
+### Run
 
 ```bash
 $ docker run --rm -p 8080:8080 spring-docker-example
