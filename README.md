@@ -15,6 +15,7 @@ Sample application with Spring Boot on Docker
 - Testcontainers
 - Jib
 - Amazon Corretto 8
+- OWASP Dependency Check
 
 ## Usage
 
@@ -49,3 +50,8 @@ $ ./mvnw clean test compile jib:dockerBuild
 ```bash
 $ docker run --rm -p 8080:8080 spring-docker-example
 ```
+
+## CI Job
+- Run OWASP Dependency Check for DevSecOps
+- Run unit tests and Build JAR
+- Build Docker image

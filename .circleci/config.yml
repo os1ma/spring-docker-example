@@ -1,21 +1,31 @@
 version: 2
 jobs:
-  build:
+
+  dependency-check:
     machine: true
-
     working_directory: ~/repo
-
     steps:
       - checkout
+      - restore_cache:
+          keys:
+            - OWASP-Dependency-Check
+      - run: ./dependency-check-wrapper.sh
+      - save_cache:
+          paths:
+            - ./OWASP-Dependency-Check
+          key: OWASP-Dependency-Check
 
+  build:
+    machine: true
+    working_directory: ~/repo
+    steps:
+      - checkout
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "pom.xml" }}
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
-
       - run: ./build.sh
-
       - save_cache:
           paths:
             - ~/.m2
