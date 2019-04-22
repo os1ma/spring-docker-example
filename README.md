@@ -52,6 +52,6 @@ $ docker run --rm -p 8080:8080 spring-docker-example
 ```
 
 ## CI Job
-- Run OWASP Dependency Check for DevSecOps
-- Run unit tests and Build JAR
-- Build Docker image
+1. Run OWASP Dependency Check for DevSecOps
+1. Run unit tests and build JAR
+1. Build Docker image
