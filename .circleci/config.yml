@@ -30,3 +30,10 @@ jobs:
           paths:
             - ~/.m2
           key: v1-dependencies-{{ checksum "pom.xml" }}
+
+workflows:
+  version: 2
+  default:
+    jobs:
+      - dependency-check
+      - build
